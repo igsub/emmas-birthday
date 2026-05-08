@@ -1,4 +1,5 @@
 import { photos } from '../photos'
+import FlipPhoto from './FlipPhoto'
 
 const layouts = [
   'top-[6%]    left-[4%]   w-32 md:w-44 lg:w-52 -rotate-6',
@@ -11,48 +12,71 @@ const layouts = [
 
 export default function Hero() {
   const desktopPhotos = photos.slice(0, layouts.length)
+  const half = Math.ceil(photos.length / 2)
+  const mobileTop = photos.slice(0, half)
+  const mobileBottom = photos.slice(half)
 
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-center justify-center px-4 py-16">
-      <div className="absolute inset-0 hidden md:block pointer-events-none" aria-hidden="true">
-        {desktopPhotos.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt=""
-            className={`absolute ${layouts[i]} rounded-sm shadow-2xl ring-[6px] ring-white object-cover aspect-[4/5]`}
+    <section className="relative min-h-screen overflow-hidden flex flex-col px-4 py-8 md:py-16">
+      <div className="absolute inset-0 hidden md:block z-0">
+        {desktopPhotos.map((p, i) => (
+          <FlipPhoto
+            key={`d-${i}`}
+            src={p.src}
+            phrase={p.phrase}
+            className={`absolute ${layouts[i]} aspect-[4/5]`}
           />
         ))}
       </div>
 
-      <div className="relative z-10 text-center max-w-4xl">
-        <p className="font-sans text-[0.7rem] sm:text-xs uppercase tracking-[0.45em] text-rosa-700/80 mb-6 md:mb-8">
-          Para vos, Emma
-        </p>
+      {mobileTop.length > 0 && (
+        <div className="md:hidden -mx-4 px-4">
+          <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2">
+            {mobileTop.map((p, i) => (
+              <FlipPhoto
+                key={`mt-${i}`}
+                src={p.src}
+                phrase={p.phrase}
+                className="h-44 w-36 flex-shrink-0 snap-center"
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
-        <h1 className="text-rosa-950 leading-[0.95]">
-          <span className="font-display italic block text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] font-semibold tracking-tight">
-            Feliz
-          </span>
-          <span className="font-script block text-[5.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] text-rosa-800 -mt-3 md:-mt-8 -rotate-1">
-            cumpleaños
-          </span>
-        </h1>
+      <div className="relative z-10 flex-1 flex items-center justify-center">
+        <div className="text-center max-w-4xl mx-auto">
+          <p className="font-sans text-[0.7rem] sm:text-xs uppercase tracking-[0.45em] text-rosa-700/80 mb-6 md:mb-8">
+            Para vos, Emma
+          </p>
 
-        <p className="mt-10 md:mt-14 text-base md:text-lg text-rosa-900/70 italic max-w-xl mx-auto px-4">
-          Un día entero para vos. Y más abajo, un mensaje que es solo tuyo.
-        </p>
+          <h1 className="text-rosa-950 leading-[0.95]">
+            <span className="font-display italic block text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] font-semibold tracking-tight">
+              Feliz
+            </span>
+            <span className="font-script block text-[5.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] text-rosa-800 -mt-3 md:-mt-8 -rotate-1">
+              cumpleaños
+            </span>
+          </h1>
+
+          <p className="mt-8 md:mt-14 text-base md:text-lg text-rosa-900/70 italic max-w-xl mx-auto px-4">
+            Un día entero para vos. Y más abajo, un mensaje que es solo tuyo.
+          </p>
+          <p className="md:hidden mt-3 text-xs text-rosa-700/60">
+            (tocá las fotos para ver una sorpresa)
+          </p>
+        </div>
       </div>
 
-      {photos.length > 0 && (
-        <div className="absolute bottom-6 left-0 right-0 md:hidden">
-          <div className="flex gap-3 overflow-x-auto px-4 snap-x snap-mandatory pb-2">
-            {photos.map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt=""
-                className="h-36 w-28 flex-shrink-0 rounded-sm shadow-lg ring-4 ring-white object-cover snap-center"
+      {mobileBottom.length > 0 && (
+        <div className="md:hidden -mx-4 px-4">
+          <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2">
+            {mobileBottom.map((p, i) => (
+              <FlipPhoto
+                key={`mb-${i}`}
+                src={p.src}
+                phrase={p.phrase}
+                className="h-44 w-36 flex-shrink-0 snap-center"
               />
             ))}
           </div>

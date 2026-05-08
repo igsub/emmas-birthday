@@ -1,14 +1,14 @@
 // ---------------------------------------------------------------------------
-// FOTOS DE EMMA
+// FOTOS DE EMMA + FRASES OCULTAS
 // ---------------------------------------------------------------------------
-// Para agregar/sacar/reordenar fotos:
-//   1. Drop nuevas en src/assets/photos/ (ya hay 9 importadas abajo)
-//   2. Importalas y agregalas/sacalas/reordenalas en `photos`
-//   3. Vite optimiza y bundlea automaticamente
+// Cada foto es flippable: tap/click muestra la foto, otro tap/click muestra
+// la `phrase` por detras. Reemplaza las frases placeholder con lo que quieras
+// decirle por cada foto.
 //
-// El layout: las primeras 6 ocupan los slots polaroid del Hero en desktop.
-// El strip mobile muestra TODAS. Si queres que una foto especifica salga en
-// desktop, ponela en las primeras 6 posiciones.
+// Reglas del layout:
+//   - Las primeras 6 fotos llenan los slots polaroid del Hero en desktop.
+//   - En mobile, mitad va al carousel de arriba, mitad al de abajo.
+//   - Reordenar el array reordena ambos.
 // ---------------------------------------------------------------------------
 
 import img1 from './assets/photos/PXL_20251229_221454441.jpg'
@@ -21,4 +21,16 @@ import img7 from './assets/photos/IMG_7677.jpg'
 import img8 from './assets/photos/IMG_4863.jpg'
 import img9 from './assets/photos/IMG_4745.jpg'
 
-export const photos: string[] = [img1, img2, img3, img4, img5, img6, img7, img8, img9]
+export type Photo = { src: string; phrase: string }
+
+export const photos: Photo[] = [
+  { src: img1, phrase: 'frase 1 — editame en src/photos.ts' },
+  { src: img2, phrase: 'frase 2 — editame en src/photos.ts' },
+  { src: img3, phrase: 'frase 3 — editame en src/photos.ts' },
+  { src: img4, phrase: 'frase 4 — editame en src/photos.ts' },
+  { src: img5, phrase: 'frase 5 — editame en src/photos.ts' },
+  { src: img6, phrase: 'frase 6 — editame en src/photos.ts' },
+  { src: img7, phrase: 'frase 7 — editame en src/photos.ts' },
+  { src: img8, phrase: 'frase 8 — editame en src/photos.ts' },
+  { src: img9, phrase: 'frase 9 — editame en src/photos.ts' },
+]
