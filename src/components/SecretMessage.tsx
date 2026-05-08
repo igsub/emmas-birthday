@@ -72,7 +72,6 @@ export default function SecretMessage() {
                   id="pw"
                   type="password"
                   autoComplete="off"
-                  autoFocus
                   value={input}
                   onChange={(e) => {
                     setInput(e.target.value)
