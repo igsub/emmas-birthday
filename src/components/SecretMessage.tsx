@@ -35,18 +35,18 @@ export default function SecretMessage() {
   }
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-rose-100 via-amber-50 to-rose-50 px-4 py-20 flex items-center justify-center">
+    <section className="relative min-h-screen px-4 py-20 flex items-center justify-center">
       <div className="relative w-full max-w-2xl">
-        <h2
-          style={{ fontFamily: 'var(--font-display)' }}
-          className="text-center text-4xl md:text-5xl font-semibold text-rose-950 mb-10"
-        >
-          Un mensaje para vos
+        <p className="text-center text-[0.7rem] sm:text-xs uppercase tracking-[0.45em] text-rosa-700/80 mb-3">
+          Solo para vos
+        </p>
+        <h2 className="font-display-wonk italic text-center text-5xl md:text-6xl font-medium text-rosa-950 mb-12">
+          un mensaje
         </h2>
 
-        <div className="relative rounded-3xl bg-white/70 backdrop-blur-sm shadow-xl ring-1 ring-rose-100 p-8 md:p-12 min-h-[20rem]">
+        <div className="relative rounded-3xl bg-white/75 backdrop-blur-sm shadow-xl ring-1 ring-rosa-200/60 p-8 md:p-12 min-h-[22rem]">
           <article
-            className={`whitespace-pre-line text-rose-950 leading-relaxed text-base md:text-lg transition-all duration-700 ease-out ${
+            className={`whitespace-pre-line text-rosa-950 leading-[1.7] text-base md:text-lg transition-all duration-700 ease-out ${
               unlocked
                 ? 'opacity-100'
                 : 'blur-md select-none pointer-events-none opacity-90'
@@ -60,13 +60,13 @@ export default function SecretMessage() {
             <div className="absolute inset-0 flex items-center justify-center p-4 md:p-6">
               <form
                 onSubmit={handleSubmit}
-                className="w-full max-w-sm rounded-2xl bg-rose-950/90 backdrop-blur p-6 shadow-2xl text-white"
+                className="w-full max-w-sm rounded-2xl bg-rosa-950/92 backdrop-blur p-6 shadow-2xl text-white"
               >
-                <p className="text-xs uppercase tracking-[0.3em] text-rose-200/70 mb-2">
-                  Solo Emma
+                <p className="text-[0.65rem] uppercase tracking-[0.35em] text-rosa-200/70 mb-2">
+                  contraseña
                 </p>
-                <label htmlFor="pw" className="block text-base md:text-lg mb-4">
-                  Ingresá la contraseña para leer
+                <label htmlFor="pw" className="block text-base md:text-lg mb-4 font-medium">
+                  Ingresá la palabra para leer el mensaje
                 </label>
                 <input
                   id="pw"
@@ -78,17 +78,17 @@ export default function SecretMessage() {
                     setInput(e.target.value)
                     if (error) setError(false)
                   }}
-                  className="w-full rounded-lg border border-rose-200/30 bg-rose-950/50 px-4 py-2 text-white placeholder-rose-200/40 outline-none focus:border-rose-200 transition"
-                  placeholder="contraseña"
+                  className="w-full rounded-lg border border-rosa-200/30 bg-rosa-950/50 px-4 py-2 text-white placeholder-rosa-200/40 outline-none focus:border-rosa-200 transition"
+                  placeholder="..."
                 />
                 <button
                   type="submit"
-                  className="mt-4 w-full rounded-lg bg-rose-100 text-rose-950 font-semibold py-2 hover:bg-white transition"
+                  className="mt-4 w-full rounded-lg bg-rosa-100 text-rosa-950 font-semibold py-2 hover:bg-white transition"
                 >
-                  Revelar mensaje
+                  Revelar
                 </button>
                 <p
-                  className={`mt-3 text-sm text-rose-200 transition-opacity ${
+                  className={`mt-3 text-sm text-rosa-200 transition-opacity ${
                     error ? 'opacity-100' : 'opacity-0'
                   }`}
                   aria-live="polite"
@@ -101,8 +101,11 @@ export default function SecretMessage() {
         </div>
 
         {unlocked && (
-          <p className="mt-8 text-center text-rose-900/70 italic text-sm md:text-base">
-            Te quiero, Emma. Feliz cumpleaños.
+          <p
+            style={{ fontFamily: 'var(--font-script)' }}
+            className="mt-10 text-center text-rosa-800 text-3xl md:text-4xl"
+          >
+            te quiero, Emma
           </p>
         )}
       </div>

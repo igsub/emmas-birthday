@@ -1,19 +1,19 @@
 import { photos } from '../photos'
 
 const layouts = [
-  'top-[6%]   left-[5%]   w-32 md:w-44 lg:w-52 -rotate-6',
-  'top-[10%]  right-[6%]  w-28 md:w-40 lg:w-48  rotate-3',
-  'bottom-[20%] left-[8%] w-36 md:w-48 lg:w-56  rotate-2',
-  'bottom-[8%] right-[5%] w-32 md:w-44 lg:w-52 -rotate-3',
-  'top-[42%]  left-[1%]   w-24 md:w-36 lg:w-44  rotate-6',
-  'top-[46%]  right-[1%]  w-24 md:w-36 lg:w-44 -rotate-2',
+  'top-[6%]    left-[4%]   w-32 md:w-44 lg:w-52 -rotate-6',
+  'top-[10%]   right-[5%]  w-28 md:w-40 lg:w-48  rotate-3',
+  'bottom-[18%] left-[7%]  w-36 md:w-48 lg:w-56  rotate-2',
+  'bottom-[8%] right-[4%]  w-32 md:w-44 lg:w-52 -rotate-3',
+  'top-[42%]   left-[1%]   w-24 md:w-36 lg:w-44  rotate-6',
+  'top-[46%]   right-[1%]  w-24 md:w-36 lg:w-44 -rotate-2',
 ]
 
 export default function Hero() {
   const desktopPhotos = photos.slice(0, layouts.length)
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-rose-50 via-amber-50 to-rose-100 flex items-center justify-center px-4 py-16">
+    <section className="relative min-h-screen overflow-hidden flex items-center justify-center px-4 py-16">
       <div className="absolute inset-0 hidden md:block pointer-events-none" aria-hidden="true">
         {desktopPhotos.map((src, i) => (
           <img
@@ -25,19 +25,29 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative z-10 text-center max-w-3xl">
-        <p className="text-xs sm:text-sm uppercase tracking-[0.4em] text-rose-700/70 mb-5 md:mb-7">
+      <div className="relative z-10 text-center max-w-4xl">
+        <p
+          style={{ fontFamily: 'var(--font-sans)' }}
+          className="text-[0.7rem] sm:text-xs uppercase tracking-[0.45em] text-rosa-700/80 mb-6 md:mb-8"
+        >
           Para vos, Emma
         </p>
-        <h1
-          style={{ fontFamily: 'var(--font-display)' }}
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.95] text-rose-950"
-        >
-          Feliz
-          <br />
-          cumpleaños
+
+        <h1 className="text-rosa-950 leading-[0.95]">
+          <span
+            className="font-display-wonk italic block text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] font-medium"
+          >
+            Feliz
+          </span>
+          <span
+            style={{ fontFamily: 'var(--font-script)' }}
+            className="block text-7xl sm:text-8xl md:text-[9rem] lg:text-[12rem] font-bold leading-[0.85] text-rosa-800 -mt-2 md:-mt-6 -rotate-2"
+          >
+            cumpleaños
+          </span>
         </h1>
-        <p className="mt-7 md:mt-10 text-base md:text-lg text-rose-900/70 italic max-w-xl mx-auto px-4">
+
+        <p className="mt-10 md:mt-14 text-base md:text-lg text-rosa-900/70 italic max-w-xl mx-auto px-4">
           Un día entero para vos. Y más abajo, un mensaje que es solo tuyo.
         </p>
       </div>
@@ -57,7 +67,7 @@ export default function Hero() {
         </div>
       )}
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-rose-700/50 text-xs tracking-widest uppercase hidden md:flex flex-col items-center gap-1 animate-bounce">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-rosa-700/50 text-[0.65rem] tracking-[0.3em] uppercase hidden md:flex flex-col items-center gap-1 animate-bounce">
         <span>scroll</span>
         <span aria-hidden="true">↓</span>
       </div>

@@ -1,16 +1,56 @@
 @import "tailwindcss";
 
+/* ---------------------------------------------------------------------------
+   Theme tokens — Tailwind v4 generates utility classes from these (e.g.
+   font-display, font-script, font-sans).
+   --------------------------------------------------------------------------- */
 @theme {
   --font-display: "Fraunces", "Georgia", serif;
+  --font-script: "Caveat", "Brush Script MT", cursive;
   --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Pastel rosa palette — pulled from a real warm-pink color set, not the
+     default rose ramp, for a softer card-paper feel. */
+  --color-rosa-50:  #fff5f7;
+  --color-rosa-100: #ffeaf0;
+  --color-rosa-200: #ffd6df;
+  --color-rosa-300: #ffb8c7;
+  --color-rosa-400: #ff8fa3;
+  --color-rosa-500: #f56b85;
+  --color-rosa-600: #d94e6c;
+  --color-rosa-700: #b33b56;
+  --color-rosa-800: #8a2c43;
+  --color-rosa-900: #5e1c2c;
+  --color-rosa-950: #3b0f1c;
 }
 
+/* ---------------------------------------------------------------------------
+   Base typography defaults
+   --------------------------------------------------------------------------- */
 html, body, #root {
   min-height: 100%;
 }
 
 body {
   font-family: var(--font-sans);
-  background: #fdf6ee;
-  color: #1f1a17;
+  background: linear-gradient(
+    135deg,
+    var(--color-rosa-50)  0%,
+    var(--color-rosa-100) 60%,
+    var(--color-rosa-200) 100%
+  );
+  background-attachment: fixed;
+  color: var(--color-rosa-950);
+  font-feature-settings: "kern", "liga", "calt";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fraunces in its expressive mode: large optical size, max softness on
+   curves, wonky alternates on. This is what gives it the handwritten-card
+   character we want (vs default Fraunces which reads like a magazine). */
+.font-display-wonk {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
 }
