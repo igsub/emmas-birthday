@@ -31,7 +31,7 @@ export default function FlipPhoto({ src, phrase, className = '' }: Props) {
           />
         </div>
         <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-sm shadow-xl ring-[6px] ring-white bg-rosa-50 flex items-center justify-center p-3 md:p-4">
-          <p className="font-display italic text-rosa-950 text-center text-sm md:text-base leading-snug">
+          <p className="font-display italic text-rosa-950 text-center text-xl md:text-lg lg:text-xl leading-snug">
             {phrase}
           </p>
         </div>
