@@ -26,23 +26,15 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center max-w-4xl">
-        <p
-          style={{ fontFamily: 'var(--font-sans)' }}
-          className="text-[0.7rem] sm:text-xs uppercase tracking-[0.45em] text-rosa-700/80 mb-6 md:mb-8"
-        >
+        <p className="font-sans text-[0.7rem] sm:text-xs uppercase tracking-[0.45em] text-rosa-700/80 mb-6 md:mb-8">
           Para vos, Emma
         </p>
 
         <h1 className="text-rosa-950 leading-[0.95]">
-          <span
-            className="font-display-wonk italic block text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] font-medium"
-          >
+          <span className="font-display italic block text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] font-semibold tracking-tight">
             Feliz
           </span>
-          <span
-            style={{ fontFamily: 'var(--font-script)' }}
-            className="block text-7xl sm:text-8xl md:text-[9rem] lg:text-[12rem] font-bold leading-[0.85] text-rosa-800 -mt-2 md:-mt-6 -rotate-2"
-          >
+          <span className="font-script block text-[5.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] text-rosa-800 -mt-3 md:-mt-8 -rotate-1">
             cumpleaños
           </span>
         </h1>

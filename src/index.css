@@ -5,8 +5,8 @@
    font-display, font-script, font-sans).
    --------------------------------------------------------------------------- */
 @theme {
-  --font-display: "Fraunces", "Georgia", serif;
-  --font-script: "Caveat", "Brush Script MT", cursive;
+  --font-display: "Cormorant Garamond", "Garamond", "Georgia", serif;
+  --font-script: "Allura", "Brush Script MT", cursive;
   --font-sans: "Inter", system-ui, sans-serif;
 
   /* Pastel rosa palette — pulled from a real warm-pink color set, not the
@@ -47,10 +47,3 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Fraunces in its expressive mode: large optical size, max softness on
-   curves, wonky alternates on. This is what gives it the handwritten-card
-   character we want (vs default Fraunces which reads like a magazine). */
-.font-display-wonk {
-  font-family: var(--font-display);
-  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
-}

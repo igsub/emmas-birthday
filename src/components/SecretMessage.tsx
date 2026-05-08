@@ -40,7 +40,7 @@ export default function SecretMessage() {
         <p className="text-center text-[0.7rem] sm:text-xs uppercase tracking-[0.45em] text-rosa-700/80 mb-3">
           Solo para vos
         </p>
-        <h2 className="font-display-wonk italic text-center text-5xl md:text-6xl font-medium text-rosa-950 mb-12">
+        <h2 className="font-display italic text-center text-5xl md:text-6xl font-semibold text-rosa-950 mb-12">
           un mensaje
         </h2>
 
@@ -101,10 +101,7 @@ export default function SecretMessage() {
         </div>
 
         {unlocked && (
-          <p
-            style={{ fontFamily: 'var(--font-script)' }}
-            className="mt-10 text-center text-rosa-800 text-3xl md:text-4xl"
-          >
+          <p className="font-script mt-10 text-center text-rosa-800 text-4xl md:text-5xl">
             te quiero, Emma
           </p>
         )}
