@@ -43,7 +43,7 @@ export const photos: Photo[] = [
   { src: img7, phrase: 'Mon amour' },
   { src: img8, phrase: 'You are beautiful' },
   { src: img9, phrase: 'Your hair ARE so long!' },
-  { src: img10, phrase: 'Old enough to know better. Young enough to do it anyway.' },
+  { src: img10, phrase: 'You are more than enough' },
   { src: img11, phrase: 'Que paaaso?' },
   { src: img12, phrase: "Little huggy hug" },
   { src: img13, phrase: "Time to dress the wrong way" },
@@ -52,6 +52,6 @@ export const photos: Photo[] = [
   { src: img16, phrase: 'You are strong' },
   { src: img17, phrase: 'The best place to live is within you.' },
   { src: img18, phrase: 'You are your best friend.' },
-  { src: img19, phrase: 'You are fit' },
+  { src: img19, phrase: 'You are a warrior' },
   { src: img20, phrase: "How many sunsets have you seen already?" },
 ]

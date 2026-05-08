@@ -15,7 +15,7 @@ type GameStep = { text: string; buttonLabel: string }
 
 const STEPS: GameStep[] = [
   {
-    text: 'Esto es un texto que escribí para vos en tu día:',
+    text: 'This is something i wrote for you:',
     buttonLabel: 'Continue',
   },
   {
@@ -38,13 +38,20 @@ const STEPS: GameStep[] = [
 // ---------------------------------------------------------------------------
 const FINAL_MESSAGE = `I'm at the computer right now and watching you over my shoulder while you meditate. "I love her" is the first thing that comes to my mind. I won't ever have enough words to tell you how amazing you are, how incredible you are, and how much I love you. Anyways, I'm going to keep on doing it.
 
-It's been a year that we are together and I keep on discovering the beauty that is inside of you. It is never ending. I see it in the way you care about your family and your friends. You are always there. How you see the good in the people who are close to you and how you encourage everyone to be their best version. Calling them every day, giving advice, asking for advice (that shows everyone how much you care about them and how important are for you their words). And you would think: "It is normal". Well, it is not. You take the time to do it and if you don't have the time, you do it while you keep on going with your day. That is remarkable, that is beautiful to see and it shows who you are. I feel how supportive you are. 
+It's been a year that we are together and I keep on discovering the beauty that is inside of you. It is never ending. I see it in the way you care about your family and your friends. You are always there. How you see the good in the people who are close to you and how you encourage everyone to be their best version. Calling them every day, giving advice, asking for advice (that shows everyone how much you care about them and how important are for you their words). And you would think: "It is normal". Well, it is not. You take the time to do it and if you don't have the time, you do it while you keep on going with your day. That is remarkable, that is beautiful to see and it shows who you are. 
 
-I see how aware you are about your wellbeing and how you fight every day to be in peace with yourself. I see all the changes you made in only one year. You ispire me. You make want to be a better person every day. I admire you. I love you.
+I feel how supportive you are. 
+I see how aware you are about your wellbeing and how you fight every day to be in peace with yourself. 
+I see all the changes you made in only one year. 
+You inspire me. 
+You make want to be a better person every day. 
+I admire you.
 
 For this year to come I wish for you to see how much of a beautiful human being you are, the way everyone around you sees it.
-
-I wish you keep on inspiring others the way you do it. I wish for you to love yourself as much as I love you. I wish that your smile keeps bringing light to this world. I wish your laugh keeps spreading through every room you walk into.
+I wish you keep on inspiring others the way you do it. 
+I wish for you to love yourself as much as I love you. 
+I wish that your smile keeps bringing light to this world. 
+I wish your laugh keeps spreading through every room you walk into.
 
 I took the liberty, but I know I'm not the one who should be making wishes today. That's you.
 
@@ -82,19 +89,11 @@ export default function SecretMessage() {
 
         <div className="relative rounded-3xl bg-white/75 backdrop-blur-sm shadow-xl ring-1 ring-rosa-200/60 p-8 md:p-12 min-h-[22rem]">
           {!unlocked && (
-            <>
-              <article
-                aria-hidden="true"
-                className="whitespace-pre-line text-rosa-950 leading-[1.7] text-base md:text-lg blur-md select-none pointer-events-none opacity-90"
+            <div className="flex items-center justify-center min-h-[18rem]">
+              <form
+                onSubmit={handleSubmit}
+                className="w-full max-w-sm rounded-2xl bg-rosa-950/92 backdrop-blur p-6 shadow-2xl text-white"
               >
-                {FINAL_MESSAGE}
-              </article>
-
-              <div className="absolute inset-0 flex items-center justify-center p-4 md:p-6">
-                <form
-                  onSubmit={handleSubmit}
-                  className="w-full max-w-sm rounded-2xl bg-rosa-950/92 backdrop-blur p-6 shadow-2xl text-white"
-                >
                   <p className="text-[0.65rem] uppercase tracking-[0.35em] text-rosa-200/70 mb-2">
                     password
                   </p>
@@ -132,7 +131,6 @@ export default function SecretMessage() {
                   </p>
                 </form>
               </div>
-            </>
           )}
 
           {unlocked && !onFinalStep && (
@@ -165,7 +163,7 @@ export default function SecretMessage() {
 
         {onFinalStep && (
           <p className="font-script mt-10 text-center text-rosa-800 text-4xl md:text-5xl animate-fade-up">
-            love you, Emma
+            I love you
           </p>
         )}
       </div>

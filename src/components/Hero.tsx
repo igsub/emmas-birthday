@@ -47,7 +47,7 @@ export default function Hero() {
       <div className="relative z-10 flex-1 flex items-center justify-center">
         <div className="text-center max-w-4xl mx-auto">
           <p className="font-sans text-[0.7rem] sm:text-xs uppercase tracking-[0.45em] text-rosa-700/80 mb-6 md:mb-8">
-            For you, Emma
+            For you with love
           </p>
 
           <h1 className="text-rosa-950 leading-[0.95]">
