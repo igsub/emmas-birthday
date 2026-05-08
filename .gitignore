@@ -27,3 +27,10 @@ dist-ssr
 
 # TS build cache
 *.tsbuildinfo
+
+# Asset originals — only commit web-ready jpg/png/webp in src/assets/
+*.HEIC
+*.heic
+*.zip
+*.mov
+*.MOV

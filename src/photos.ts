@@ -1,18 +1,24 @@
 // ---------------------------------------------------------------------------
 // FOTOS DE EMMA
 // ---------------------------------------------------------------------------
-// Para agregar fotos:
-//   1. Dropealas en src/assets/photos/  (jpg, png, webp, lo que sea)
-//   2. Importalas abajo
-//   3. Pushealas al array `photos`
+// Para agregar/sacar/reordenar fotos:
+//   1. Drop nuevas en src/assets/photos/ (ya hay 9 importadas abajo)
+//   2. Importalas y agregalas/sacalas/reordenalas en `photos`
+//   3. Vite optimiza y bundlea automaticamente
 //
-// Ejemplo:
-//   import nosotrosPlaya from './assets/photos/playa.jpg'
-//   import navidad      from './assets/photos/navidad.jpg'
-//   export const photos = [nosotrosPlaya, navidad]
-//
-// El layout soporta hasta 6 fotos en desktop (las extra van al strip mobile).
-// Si pones menos de 6, las posiciones restantes quedan vacias y se ve igual de bien.
+// El layout: las primeras 6 ocupan los slots polaroid del Hero en desktop.
+// El strip mobile muestra TODAS. Si queres que una foto especifica salga en
+// desktop, ponela en las primeras 6 posiciones.
 // ---------------------------------------------------------------------------
 
-export const photos: string[] = []
+import img1 from './assets/photos/PXL_20251229_221454441.jpg'
+import img2 from './assets/photos/PXL_20260131_201237680.jpg'
+import img3 from './assets/photos/PXL_20260217_030737770.jpg'
+import img4 from './assets/photos/IMG_4806.jpg'
+import img5 from './assets/photos/IMG_7041.jpg'
+import img6 from './assets/photos/IMG_7399.jpg'
+import img7 from './assets/photos/IMG_7677.jpg'
+import img8 from './assets/photos/IMG_4863.jpg'
+import img9 from './assets/photos/IMG_4745.jpg'
+
+export const photos: string[] = [img1, img2, img3, img4, img5, img6, img7, img8, img9]
