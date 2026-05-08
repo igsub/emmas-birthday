@@ -47,23 +47,23 @@ export default function Hero() {
       <div className="relative z-10 flex-1 flex items-center justify-center">
         <div className="text-center max-w-4xl mx-auto">
           <p className="font-sans text-[0.7rem] sm:text-xs uppercase tracking-[0.45em] text-rosa-700/80 mb-6 md:mb-8">
-            Para vos, Emma
+            For you, Emma
           </p>
 
           <h1 className="text-rosa-950 leading-[0.95]">
             <span className="font-display italic block text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] font-semibold tracking-tight">
-              Feliz
+              Happy
             </span>
-            <span className="font-script block text-[5.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] text-rosa-800 -mt-3 md:-mt-8 -rotate-1">
-              cumpleaños
+            <span className="font-script block text-[6rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] text-rosa-800 -mt-3 md:-mt-8 -rotate-1">
+              birthday
             </span>
           </h1>
 
           <p className="mt-8 md:mt-14 text-base md:text-lg text-rosa-900/70 italic max-w-xl mx-auto px-4">
-            Un día entero para vos. Y más abajo, un mensaje que es solo tuyo.
+            And further down, a message that's only for you.
           </p>
           <p className="md:hidden mt-3 text-xs text-rosa-700/60">
-            (tocá las fotos para ver una sorpresa)
+            (tap the photos for a surprise)
           </p>
         </div>
       </div>
